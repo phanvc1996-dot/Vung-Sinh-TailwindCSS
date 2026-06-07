@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/output.css" />
     <title>Vũng Sình Tour</title>
+    <!-- Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -22,84 +24,166 @@
     />
   </head>
   <body>
-    <header
-      class="py-10 sticky top-[-8px] z-10 bg-white/80 backdrop-blur-[10px]"
-    >
-      <section class="max-w-[1170px] mx-auto px-3">
-        <section class="flex justify-between items-center">
-          <!-- Logo -->
-          <section>
-            <a
-              href="#!"
-              class="block text-4xl font-playfair font-extrabold bg-gradient-to-r from-blue-700 to-blue-200 bg-clip-text text-transparent hover:scale-125 duration-400"
-              >Vũng Sình</a
-            >
-          </section>
-          <!-- Navigation -->
-          <section>
-            <nav>
-              <ul class="flex justify-between items-center">
-                <li>
-                  <a
-                    href="#!"
-                    class="block mx-4 font-outfit text-xl font-semibold hover:text-blue-700 transition-all hover:scale-120 ease-linear duration-400 hover:text-shadow-md hover:text-shadow-blue-200"
-                    >Trang chủ</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#!"
-                    class="block mx-4 font-outfit text-xl font-semibold hover:text-blue-700 transition-all hover:scale-120 ease-linea duration-400 hover:text-shadow-md hover:text-shadow-blue-200"
-                    >Giới thiệu</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#!"
-                    class="block mx-4 font-outfit text-xl font-semibold hover:text-blue-700 transition-all hover:scale-120 ease-linea duration-400 hover:text-shadow-md hover:text-shadow-blue-200"
-                    >Địa điểm</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#!"
-                    class="block mx-4 font-outfit text-xl font-semibold hover:text-blue-700 transition-all hover:scale-120 ease-linea duration-400 hover:text-shadow-md hover:text-shadow-blue-200"
-                    >Ẩm thực</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#!"
-                    class="block mx-4 font-outfit text-xl font-semibold hover:text-blue-700 transition-all hover:scale-120 ease-linea duration-400 hover:text-shadow-md hover:text-shadow-blue-200"
-                    >Liên hệ</a
-                  >
-                </li>
-              </ul>
-            </nav>
+    <header>
+      <section
+        class="py-10 sticky top-[-8px] z-10 bg-white/80 backdrop-blur-[10px]"
+      >
+        <section class="max-w-[1170px] mx-auto px-3">
+          <section class="flex justify-between items-center">
+            <!-- Logo -->
+            <section>
+              <a
+                href="#!"
+                class="block ml-4 lg:ml-1 text-3xl lg:text-4xl font-playfair font-semibold lg:font-extrabold bg-gradient-to-r from-blue-700 to-blue-200 bg-clip-text text-transparent hover:scale-125 duration-400"
+                >Vũng Sình</a
+              >
+            </section>
+            <!-- Navigation -->
+            <section>
+              <nav class="hidden lg:block">
+                <ul class="flex justify-between items-center">
+                  <li>
+                    <a
+                      href="#!"
+                      class="block mx-4 font-outfit text-xl font-semibold hover:text-blue-700 transition-all hover:scale-125 ease-linear duration-400 hover:text-shadow-md hover:text-shadow-blue-200"
+                      >Trang chủ</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#!"
+                      class="block mx-4 font-outfit text-xl font-semibold hover:text-blue-700 transition-all hover:scale-125 ease-linear duration-400 hover:text-shadow-md hover:text-shadow-blue-200"
+                      >Giới thiệu</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#!"
+                      class="block mx-4 font-outfit text-xl font-semibold hover:text-blue-700 transition-all hover:scale-125 ease-linear duration-400 hover:text-shadow-md hover:text-shadow-blue-200"
+                      >Địa điểm</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#!"
+                      class="block mx-4 font-outfit text-xl font-semibold hover:text-blue-700 transition-all hover:scale-125 ease-linear duration-400 hover:text-shadow-md hover:text-shadow-blue-200"
+                      >Ẩm thực</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#!"
+                      class="block mx-4 font-outfit text-xl font-semibold hover:text-blue-700 transition-all hover:scale-125 ease-linear duration-400 hover:text-shadow-md hover:text-shadow-blue-200"
+                      >Liên hệ</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+              <!-- Mobile Menu -->
+              <label class="block lg:hidden" for="navigation-mobile-input">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 640"
+                  class="w-10 h-10 fill-blue-800 mr-2"
+                >
+                  <path
+                    d="M160 96C124.7 96 96 124.7 96 160L96 480C96 515.3 124.7 544 160 544L480 544C515.3 544 544 515.3 544 480L544 160C544 124.7 515.3 96 480 96L160 96zM232 296L408 296C421.3 296 432 306.7 432 320C432 333.3 421.3 344 408 344L232 344C218.7 344 208 333.3 208 320C208 306.7 218.7 296 232 296z"
+                  />
+                </svg>
+              </label>
+            </section>
           </section>
         </section>
       </section>
+      <!-- Input -->
+      <input
+        type="checkbox"
+        name=""
+        id="navigation-mobile-input"
+        class="peer lg:hidden hidden"
+      />
+      <!-- Overlay -->
+      <label
+        for="navigation-mobile-input"
+        class="z-10 fixed top-0 right-0 bottom-0 left-0 bg-gray-400/50 block lg:hidden invisible peer-checked:visible transition-opacity duration-[0.5s] ease-linear"
+      ></label>
+      <!-- Mobile Navigation -->
+      <nav
+        class="block lg:hidden fixed top-0 right-0 bottom-0 w-[320px] max-w-[100%] bg-white z-10 translate-x-full peer-checked:translate-x-0 opacity-0 peer-checked:opacity-100 transition-all duration-[0.4s] ease-linear"
+      >
+        <ul class="mt-7 ml-7">
+          <li>
+            <a
+              href="#!"
+              class="text-blue-800 text-2xl block py-2 hover:text-blue-500 transition-all ease-linear hover:scale-110 hover:font-semibold transition-all duration-500"
+              >Trang chủ</a
+            >
+          </li>
+          <li>
+            <a
+              href="#!"
+              class="text-blue-800 text-2xl block py-2 hover:text-blue-500 transition-all ease-linear hover:scale-110 hover:font-semibold transition-all duration-500"
+              >Giới thiệu</a
+            >
+          </li>
+          <li>
+            <a
+              href="#!"
+              class="text-blue-800 text-2xl block py-2 hover:text-blue-500 transition-all ease-linear hover:scale-110 hover:font-semibold transition-all duration-500"
+              >Địa điểm</a
+            >
+          </li>
+          <li>
+            <a
+              href="#!"
+              class="text-blue-800 text-2xl block py-2 hover:text-blue-500 transition-all ease-linear hover:scale-110 hover:font-semibold transition-all duration-500"
+              >Ẩm thực</a
+            >
+          </li>
+          <li>
+            <a
+              href="#!"
+              class="text-blue-800 text-2xl block py-2 hover:text-blue-500 transition-all ease-linear hover:scale-110 hover:font-semibold transition-all duration-500"
+              >Liên hệ</a
+            >
+          </li>
+        </ul>
+        <!-- Close button -->
+        <label for="navigation-mobile-input">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 640 640"
+            class="w-10 h-10 absolute top-8 right-5 fill-blue-800 hover:fill-blue-400 transition-all ease-linear hover:scale-125 transition-all duration-500"
+          >
+            <path
+              d="M320 112C434.9 112 528 205.1 528 320C528 434.9 434.9 528 320 528C205.1 528 112 434.9 112 320C112 205.1 205.1 112 320 112zM320 576C461.4 576 576 461.4 576 320C576 178.6 461.4 64 320 64C178.6 64 64 178.6 64 320C64 461.4 178.6 576 320 576zM231 231C221.6 240.4 221.6 255.6 231 264.9L286 319.9L231 374.9C221.6 384.3 221.6 399.5 231 408.8C240.4 418.1 255.6 418.2 264.9 408.8L319.9 353.8L374.9 408.8C384.3 418.2 399.5 418.2 408.8 408.8C418.1 399.4 418.2 384.2 408.8 374.9L353.8 319.9L408.8 264.9C418.2 255.5 418.2 240.3 408.8 231C399.4 221.7 384.2 221.6 374.9 231L319.9 286L264.9 231C255.5 221.6 240.3 221.6 231 231z"
+            />
+          </svg>
+        </label>
+      </nav>
     </header>
     <!-- Main -->
     <main>
       <!-- Welcome -->
       <section
-        class="py-30 bg-linear-[25deg] from-blue-300 via-white to-blue-200 ]"
+        class="py-30 bg-linear-[25deg] from-blue-300 via-white to-blue-200"
+        data-aos="fade-down"
+        data-aos-duration="2000"
       >
         <section class="max-w-[1170px] mx-auto px-3">
           <section>
             <p
-              class="text-xl text-center text-blue-700 bg-blue-200 font-semibold font-outfit p-3 border border-blue-800 w-[25%] mx-auto rounded-4xl"
+              class="text-lg lg:text-xl text-center text-blue-700 bg-blue-200 font-semibold font-outfit p-3 border border-blue-800 w-[76%] lg:w-[25%] mx-auto rounded-4xl"
             >
               Khám phá thành phố biển
             </p>
             <h1
-              class="mt-8 text-center text-blue-900 leading-18 font-playfair font-semibold text-6xl w-[60%] mx-auto"
+              class="mt-8 text-center text-blue-900 leading-11 lg:leading-18 font-playfair font-semibold text-4xl lg:text-6xl w-[77%] lg:w-[60%] mx-auto"
             >
               Chào mừng bạn đến với Vũng Sình Xinh Đẹp
             </h1>
             <p
-              class="text-xl text-blue-950 font-outfit mt-8 w-[62%] text-center mx-auto"
+              class="text-xl text-blue-950 font-outfit mt-8 w-[75%] lg:w-[62%] text-center mx-auto"
             >
               Trải nghiệm kỳ nghỉ tuyệt vời với những bãi biển xanh ngắt, con
               đường ven biển lãng mạn và tinh hoa ẩm thực phong phú.
@@ -112,20 +196,20 @@
         <section class="max-w-[1170px] mx-auto px-3">
           <section>
             <h1
-              class="text-center text-blue-950 text-5xl font-playfair font-semibold"
+              class="text-center text-blue-950 text-4xl lg:text-5xl font-playfair font-semibold lg:font-semibold"
             >
               Hành trình khám phá
             </h1>
             <section
-              class="w-[5%] h-1 bg-gradient-to-r from-blue-600 to-blue-200 rounded-3xl mx-auto mt-10"
+              class="w-[20%] lg:w-[5%] h-1 bg-gradient-to-r from-blue-600 to-blue-200 rounded-3xl mx-auto mt-10"
             ></section>
             <!-- Video part -->
             <section
-              class="flex flex-1 justify-around items-center gap-15 mt-15"
+              class="flex flex-col lg:flex-row flex-1 mx-[4%] lg:mx-0.5 justify-around items-center lg:gap-15 mt-16 lg:mt-15"
             >
               <!-- Video 1 -->
               <section
-                class="w-[70%] px-5 py-10 bg-white shadow-2xl rounded-4xl hover:scale-110 transition-all duration-400"
+                class="w-[100%] lg:w-[70%] px-3 lg:px-5 py-6 lg:py-10 mt-1 bg-white shadow-2xl rounded-4xl hover:scale-110 transition-all duration-400"
               >
                 <section class="rounded-3xl overflow-hidden">
                   <video controls class="w-full block aspect-video">
@@ -146,7 +230,7 @@
               </section>
               <!-- Video 2 -->
               <section
-                class="w-[70%] px-5 py-10 bg-white shadow-2xl rounded-4xl hover:scale-110 transition-all duration-400"
+                class="w-[100%] lg:w-[70%] px-3 lg:px-5 py-6 lg:py-10 mt-10 lg:mt-1 bg-white shadow-2xl rounded-4xl hover:scale-110 transition-all duration-400"
               >
                 <section class="rounded-3xl overflow-hidden">
                   <video controls class="w-full block aspect-video">
@@ -170,5 +254,34 @@
         </section>
       </section>
     </main>
+    <!-- Footer -->
+    <footer class="mt-40 py-20 bg-blue-900">
+      <section class="max-w-[1170px] mx-auto px-3">
+        <section>
+          <h1
+            class="text-white text-[35px] lg:text-[40px] font-playfair font-bold text-center"
+          >
+            Vũng Sình
+          </h1>
+          <p
+            class="mt-8 text-white text-[14px] lg:text-lg text-center font-outfit"
+          >
+            Hẹn gặp lại bạn tại thành phố biển xinh đẹp của chúng tôi!
+          </p>
+          <section
+            class="w-[70%] h-[1px] bg-gray-600 rounded-3xl mx-auto mt-12"
+          ></section>
+          <p
+            class="mt-8 text-gray-400 text-[14px] lg:text-lg text-center font-outfit"
+          >
+            © 2026 Vũng Sình Travel. Crafted by Mai Hải Bình.
+          </p>
+        </section>
+      </section>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
